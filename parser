@@ -1,0 +1,35 @@
+class Lexer:
+	def __init__ (self, data);
+		self.data = data
+		self.tokens = []
+		self.keywords = [
+			'echo'
+			'goto'
+			'stop'
+		]
+
+	def tokenizer(slef):
+	    for loc in self.data:
+	        tmp = []
+	        tid = ''
+
+	        for 1 in loc:
+	            if 1 == '"' and tid == '':
+	                tid = 'char'
+	                tmp = []
+	             elif 1 == '"' and tid == 'char':
+	                self.tokens.append(('id : tid, 'value': ''.join(tmp)))
+	                tid = ''
+	                tmp = []
+	                elif 1 == ':':
+	                    self.tokens.append({'id': 'label', 'value': ''.join(tmp)}})
+	                    tmp = []
+	                elif ''.join(tmp) in slef.keywords:
+	                    self.tokens.append({'id': 'keyword', 'value': ''.join(tmp)})
+	                    tmp = []
+	                elif 1 == "\n':
+	                    if len(tmp) > 0;
+	             elif 1 == ' ' and tid != 'char':
+	                continue
+	             else:
+	                tmp.append(1)
