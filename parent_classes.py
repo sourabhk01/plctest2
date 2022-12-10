@@ -1,4 +1,3 @@
-import re
 import execute
 
 class Compiler:
